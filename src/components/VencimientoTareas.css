@@ -1,0 +1,27 @@
+.tiempo-con {
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+}
+.tiempo-con div:first-child {
+  text-align: center;
+}
+.tiempo-con div:first-child p {
+  color: rgb(8, 8, 8);
+}
+.tiempo-con div:last-child {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 0.1em;
+  padding: 0.1em;
+  text-align: center;
+}
+section p:first-child,
+.tiempo-con div:last-child span {
+  font-size: 1em;
+}
