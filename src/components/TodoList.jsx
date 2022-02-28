@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Accordion from "./Acordeon/Accordion";
 import Formulario from "./Formulario";
-import Todo from "./Todo";
 import VencimientoTarea from "./VencimientoTarea";
 
 const TodoList = () => {
@@ -56,7 +55,7 @@ const TodoList = () => {
           <div className="col-sm-4">
             <Formulario agregarTodo={agregarTodo} />
           </div>
-          <div className="col-sm-8">
+          <div className="col-sm-8 mb-">
           <div className="table-wrapper-scroll-y my-custom-scrollbar">
             {todos.map((item, index) => (
                  <Accordion 
@@ -68,7 +67,9 @@ const TodoList = () => {
                  />
             ))}
            </div>
-           
+            
+           <div className="table-wrapper-scroll-y my-custom-scrollbar mt-5">
+             <div className="container">
            <div className="row">
              {todos.map((item, index) => (
                <VencimientoTarea 
@@ -76,8 +77,11 @@ const TodoList = () => {
                index={index}
                todo={item}/>
              ))}
-           
+             </div>
            </div>
+           </div>
+           
+          
           </div>
         </div>
       </div>

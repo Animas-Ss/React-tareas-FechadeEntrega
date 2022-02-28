@@ -101,13 +101,22 @@
 /* para poner scroll en la tabla , se le agrega las claces al disenio de la tabla y nos da el scroll*/
 .my-custom-scrollbar {
   position: relative;
-  height: 200px;
+  height: 210px;
   overflow: auto;
-  background: #020536;
 }
 .table-wrapper-scroll-y {
   display: block;
 }
+/*cambiar estilo de scroll barra de scroll*/
+.my-custom-scrollbar::-webkit-scrollbar {
+  width: 7px;
+  background: #020536;
+}
+.my-custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4ee409;
+  border-radius: 7px;
+}
+
 /*fin del escroll de la tabla*/
 .thumbnail {
   position: relative;

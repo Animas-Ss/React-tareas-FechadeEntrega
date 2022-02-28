@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("./familiaS.jpg");
+  background: url("./static/media/Imagenes/familiaS.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -13,4 +13,38 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+/*animacion de tarjetas entrada*/
+
+@keyframes MovimienTo {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+/* agregar tiempo de duracion en segundos o milisegundos, delay etc */
+.movimiento {
+  backface-visibility: visible !important;
+  animation-name: MovimienTo;
+  animation-duration: 900ms;
+  animation-delay: 0;
 }

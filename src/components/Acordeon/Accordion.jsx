@@ -14,7 +14,6 @@ export default function Accordion({
   const refHeight = useRef();
 
   useEffect(() => {
-    console.log(refHeight);
     setHeightEl(`${refHeight.current.scrollHeight}px`);
   }, []);
 
@@ -22,7 +21,6 @@ export default function Accordion({
     setToggle(!toggle);
   };
 
-  console.log(toggle);
   return (
     <div className="accordion">
       <button onClick={toggleState} className="accordion-visible">

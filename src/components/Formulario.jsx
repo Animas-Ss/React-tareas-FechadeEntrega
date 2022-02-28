@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2'; // libreria apra las alertas
 import { v4 as uuidv4 } from 'uuid'; // para crear id { v4 as uuidv4 } de esta manera renombramos a esta libreria
-import logo from "../simpsons.jpg";
+import logo from "../static/media/Imagenes/simpsons.jpg";
 import { useFormulario } from './hooks/useFormulario';
 
 // pasamos agregar tarea como propiedad (props) colocamos la llave apra desestructurarlo y no tenes que poner props.gregarTodo
@@ -86,7 +86,7 @@ const Formulario = ({agregarTodo}) => {
 
   return (
     <>
-        <div className="card card text-dark bg-warning mb-3 w-75">
+        <div className="card card text-dark bg-warning mb-3 w-75 movimiento">
         <img src={logo} className="card-img" alt="..."/>
         <div className="card-img-overlay">
         <form onSubmit={handleSubmit}>
